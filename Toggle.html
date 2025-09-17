@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Toggle Light / Dark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --btn-bg: #f5f5f5;
+      --btn-text: #222222;
+      --btn-border: #999999;
+    }
+
+    /* When checkbox is checked, override vars */
+    #mode-toggle:checked ~ .wrapper {
+      --bg: #222222;
+      --text: #f5f5f5;
+      --btn-bg: #444444;
+      --btn-text: #f5f5f5;
+      --btn-border: #666666;
+    }
+
+    body, .wrapper {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .wrapper {
+      padding: 2rem;
+    }
+
+    button {
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      border: 1px solid var(--btn-border);
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    button:focus, label:focus {
+      outline: 2px solid #ff9900;
+      outline-offset: 2px;
+    }
+
+    /* Hide the checkbox, using label as toggle control */
+    #mode-toggle {
+      position: absolute;
+      left: -9999px;
+    }
+
+    label[for="mode-toggle"] {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      border: 1px solid var(--btn-border);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    h1{
+        text-align: center;
+        background-color: purple;
+        color: azure;
+    }
+    p{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+   <h1>Vetri Technology Solutions</h1>
+  <input type="checkbox" id="mode-toggle" aria-label="Toggle theme">
+  <label for="mode-toggle"> Click Home Page </label>
+
+  <div class="wrapper">
+   <p>Vetri Technology Solutions also called VTS is the India's 01st Software Training Institute with 100% Placement Assurance Guarantee!!!</p>    
+   <p> India's 01st IT Training Institute which Provides 100% Placement Assurance in our Own IT Startup Vetri IT Systems Private Limited also called VIS. Join the leading IT institute in Surandai, offering expert trainers and 100% placement support..</p>
+   
+    
+  </div>
+
+</body>
+</html>
